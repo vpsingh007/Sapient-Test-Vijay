@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  margin: 10px 0;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+}
+main {
+  max-width: 1400px;
+  margin: auto;
+}
+.left-section {
+  padding: 0 15px 15px;
+  border-radius: 8px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 250px; /* The width is 20%, by default */
+}
+.right-section {
+  /* background-color: #4caf50; */
+  float: left;
+  width: calc(100% - 260px); /* The width is 80%, by default */
+}
+.filter-title {
+  padding: 2px 15px;
+}
+.filter-title h3 {
+  border-bottom: 2px solid #d5d3d3;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 2px;
+}
+.button-box {
+  word-break: break-all;
+}
+.button-box .button {
+  padding: 5px 15px;
+  background-color: #b3d784;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.button-box .button:hover,
+.button-box .button:active {
+  background-color: #7db901;
+}
+.button-box .col-6:nth-child(odd) a.button {
+    float: left;
+    /* margin-right: 30px; */
+}
+.button-box .col-6:nth-child(even) a.button{
+    float: right;
+}
+.notfound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+.notfound h1 {
+    font-size: 2rem;
+    color: gray;
+}
+.developer-name {
+  clear: both;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px dotted #4e4e4e;
+}
+/* Use a media query to add a break point at 700px: */
+@media screen and (max-width: 700px) {
+  .left-section,
+  .right-section {
+    width: 100%; /* The width is 100%, when the viewport is 700px or smaller */
+  }
+}
