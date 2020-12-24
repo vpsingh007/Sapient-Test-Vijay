@@ -25,7 +25,7 @@ const GlobalContextProvider = (props) => {
 
   const launchLandHandler = useCallback((paramValue, status, actionType) => {
     let newApi = `${paramValue}${status}`;
-    dispatch({ type: actionType, baseUrl: newApi });
+    dispatch({ type: actionType, baseUrl: contextData.baseUrl+newApi });
     // setBaseUrl(newApi);
   }, []);
 
