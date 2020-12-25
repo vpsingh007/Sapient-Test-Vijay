@@ -8,16 +8,13 @@ import LaunchDashboard from './components/dashboard/Dashboard.Component';
 
 function App() {
   return (
-        // <GlobalContextProvider>
-          <div className="container mt-3">
-            <Suspense fallback={<Spinner />}>
-              <Switch>
-                <Route  path="/" component={LaunchDashboard} />
-              </Switch>
-            </Suspense>
-          </div>  
-        // </GlobalContextProvider>
-        
+      <div className="container mt-3">
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route  path="/" component={LaunchDashboard} />
+          </Switch>
+        </Suspense>
+      </div>          
   );
 }
 

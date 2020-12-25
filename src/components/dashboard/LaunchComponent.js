@@ -5,7 +5,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 import { LAUNCH_SUCCESS_URL, LAUNCH_STATE_CHANGE } from "../../constant/Constant";
 
 const LaunchComponent = () => {
-    const { contextData,launchLandHandler, launchState } = useContext(GlobalContext);
+    const { launchLandHandler, launchState } = useContext(GlobalContext);
     return (
         <div className="launch-status-btn clearfix">
             <LaunchTitle title={"Successful Launch"} />
@@ -13,7 +13,7 @@ const LaunchComponent = () => {
               <StatusButton
                 successHandler={launchLandHandler}
                 queryParam={LAUNCH_SUCCESS_URL}
-                status={contextData.launchState}
+                status={launchState}
                 actionType={LAUNCH_STATE_CHANGE}
               >
                 True
@@ -21,7 +21,7 @@ const LaunchComponent = () => {
               <StatusButton
                 successHandler={launchLandHandler}
                 queryParam={LAUNCH_SUCCESS_URL}
-                status={contextData.launchState}
+                status={launchState}
                 actionType={LAUNCH_STATE_CHANGE}
               >
                 False
