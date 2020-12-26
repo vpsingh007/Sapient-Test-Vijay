@@ -9,7 +9,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
-        publicPath: 'http://localhost:8080/',
+        publicPath: 'http://localhost:3000/',
     },
     resolve: {
         extensions: ['.jsx', '.js', '.json'],
@@ -64,6 +64,6 @@ module.exports = {
       inline: true,
       progress: true,
       contentBase: './build',
-      port: 8080,
+      port: 3000,
     },
 }
